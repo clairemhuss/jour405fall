@@ -33,7 +33,7 @@ umd_fees_pct <- umd_fees |> mutate(pct_change = (`Fall 2026`- `Fall 2021`)/`Fall
 
 Write a few sentences about what you found in those percentages. What's the story here? What questions do you have?
 
-
+The two percentages that stood out most to me was the 0% increase in athletics fees between Fall 2021 and Fall 2026. I'm curious to know why this number doesn't change, even with renovations and attempted improvements for our athletic teams here, so I'm assuming a lot of that money is coming from donors or advertisements or another external source. I was shocked by the 150% increase in student sustainability fees from 2021 to 2026, but the year-by-year increases aren't as significant as some of the other categories in monetary amounts. I'm curious to know what exactly the sustainability fee entails, though. 
 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
