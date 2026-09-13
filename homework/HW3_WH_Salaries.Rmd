@@ -9,6 +9,7 @@ In this assignment, we will be working with a dataset containing information abo
 You will need to load the tidyverse library
 
 ```{r}
+library(tidyverse)
 ```
 
 Then you'll load the data from the web. The URL for the data is: https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/white_house_salaries_2026.csv. You will create a dataframe called `wh_salaries` that contains the data from this URL.
@@ -16,19 +17,20 @@ Then you'll load the data from the web. The URL for the data is: https://raw.git
 ### Task 2: Load the Data and Describe It
 
 ```{r}
+wh_salaries <- read.csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/white_house_salaries_2026.csv")
 ```
 ### Task 3: Describe the Data
 
 You should examine that dataframe carefully by clicking on it in the Environment tab in RStudio. Write a couple of sentences describing the categories of incidents. From a reporting standpoint, what stands out to you about this data? Are there any salary values that will cause problems for analysis?
 
-ANSWER HERE
+What stood out to me in this dataset was how wide the range was in the salaries, which was also a factor I thought would make it difficult from an analytic standpoint. For example, there are several unpaid employees, which are massive deviations from the next lowest salary of about $60,000. Additionally, there are some employees with the same job title of "SENIOR POLICY ADVISOR" whose salaries differ. Another factor that might make the data difficult to analyze is that some are categorized as "employees" while others are "detailees."
 
 ### Task 4: Calculate the Mean and Median of the Salaries
 
 Write code to calculate the mean and median of the salaries in the dataset using the `summarize()` function. You don't need to make a new dataframe, just display the results.
 
 ```{r}
-
+summarize(wh_salaries, mean_salary = mean(SALARY), median_salary = median(SALARY))
 ```
 
 ### Task 5: Add in the minimum and maximum salaries
@@ -36,17 +38,17 @@ Write code to calculate the mean and median of the salaries in the dataset using
 Take the code you just wrote and add in the minimum and maximum salaries (the functions for that are `min()` and `max()`). Your results should show four columns: mean_salary, median_salary, min_salary, max_salary.
 
 ```{r}
-
+summarize(wh_salaries, mean_salary = mean(SALARY), median_salary = median(SALARY), min_salary = min(SALARY), max_salary = max(SALARY))
 ```
 
 ### Task 6: Describe the Results
 
 Write a couple of sentences describing the results of your analysis. What do the mean and median salaries tell you about the data? What do the minimum and maximum salaries tell you? Are there any outliers in the data?
 
-ANSWER HERE
+Since the mean is larger than the median, we can deduce that most employees in the White House make an annual salary of more than six figures. But since the median and mean are relatively close, we can tell most employees are making somewhere around the same amount. The minimum salary and maximum salary show that there's a large range of salaries in the White House, from unpaid employees to employees making nearly $200k a year. It seems that the unpaid employees are outliers since the next highest salary is nearly $60k, but I don't think the maximum salary is an outlier as there are multiple employees making salaries around the same amount. 
 
 ### Task 7: Story Idea
 
 Based on the data, what is your best story idea? What is the next step you would take to develop that story idea?
 
-ANSWER HERE
+I'm interested in knowing more about the unpaid workers in the White House. For one, Marco Rubio has an unpaid position in the White House, which makes me interested in looking into who else holds these positions. Are these other people who have other jobs in the Trump Administration but just have multiple titles? Or people who are already wealthy enough to take up an unpaid position? I would try to find more information on these employees through employment sites like LinkedIn or other public-facing accounts to verify their identities and find out more about their employment histories. 
