@@ -39,7 +39,7 @@ team_aces |> mutate(percentile = ntile(total_aces, 100))
 
 Write a couple of sentences that puts Maryland into context with the other teams in the dataset. You can do some Internet research to help with this.
 
-
+Maryland went 14-17 in regular season play and 5-15 in Big Ten play, despite being the best Big Ten team on this list. This shows that perhaps this statistic of service aces isn't indicative of how good a team actually is at winning and cohesive play as a team. Additionally, the most teams at the top of the list have winning records, but aren't known as powerhouses or legends in volleyball. So even though we have this dataset and information from it, this isn't necessarily indicative of how good a team actually is when competing. 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
 
