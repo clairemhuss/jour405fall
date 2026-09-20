@@ -61,3 +61,23 @@ Ocean City, Maryland, racked up higher rates of violent crime and property crime
 ### Task 9: Save Your Work and Put it on GitHub
 
 Save this notebook, then commit it to your local repository. Push the changes to your GitHub repository and submit the URL for this file in ELMS.
+
+### Task 10
+
+Using the 2020 violent crime rate, calculate the percentiles using `ntile()`. Save the results to a new dataframe called `md_cities_percentiles`. How many cities are above the 90th percentile?
+
+```{r}
+md_cities_percentiles <- md_cities_rates |> mutate(percentile = ntile(md_cities_rates$violent_rate_2020, n=100))
+```
+There are 11 cities at or above the 90th percentile. 
+
+Calculate the Interquartile Range of the 2020 violent crime rate using `summarize()` and R's `IQR()` function. The syntax is similar to how `mean()` works.
+
+```{r}
+md_cities_percentiles |> summarize(IQR = IQR(violent_rate_2020)) 
+```
+
+
+Do the results change your best story idea from the previous assignment? Why or why not?
+
+I think that these results only emphasize the original story idea I had for investigating Ocean City's high crime rates. This is a high IQR, showing that there's a big gap between cities at the top of the scale versus lower down. The only thing about this new percentile table is that I might tweak my nut graf where I claim a giant difference between Ocean City and Baltimore. They are only one percentile point away from each other, so I would keep that Ocean City is still the highest in terms of these two measures of crime rates, but might lose the part about how significantly ahead of Baltimore Ocean City is. 
