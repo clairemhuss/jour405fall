@@ -74,7 +74,7 @@ The daily data is quite noisy, so let's also look at weekly patterns:
 
 ```{r weekly-patterns}
 # Add day of week 
-# accidents <- accidents |>
+accidents <- accidents |>
   mutate(
     day_of_week = wday(date, label = TRUE),
     month = floor_date(date, "month"),
