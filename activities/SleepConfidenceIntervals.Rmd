@@ -41,7 +41,7 @@ sleep_stats
 
 **Answer this question:** Based on these numbers alone, what would you tell the health reporter? Why might it be risky to report the average as the definitive answer for all students?
 
-ANSWER HERE
+Based solely on the mean and standard deviation, I think it would be reasonable for the health reporter to conclude that students are getting about the recommended hours of sleep, per the CDC's advice, and that there is nothing too alarming about this mean. But I would also tell this reporter to definitely not ascribe this data to all students in the population because of how small this sample size is compared to the population of all students at the university, or university students as a whole. 
 
 ### Task 3: Calculate the standard error
 
@@ -58,7 +58,8 @@ sleep_stats
 
 **Answer this question:** The standard error is much smaller than the standard deviation. Why? What does each one measure?
 
-ANSWER HERE
+The standard error should be smaller than standard deviation because standard deviation measures the spread of the data we have, while the error is based on many different samples. If you were to replicate the sample more than once, the standard error shows how much the mean would vary in that sample. 
+
 
 ### Task 4: Calculate a 95% confidence interval
 
@@ -79,7 +80,8 @@ sleep_stats |>
 
 **Answer this question:** Write one sentence explaining what this confidence interval means in plain English that a reader would understand.
 
-ANSWER HERE
+Confidence intervals show how often something will happen, like saying that 19 times out of 20 this will be the mean or the result in some way. In the range between the low and high end of the confidence interval, we have the true mean. 
+
 
 ### Task 5: Visualize the distribution with the confidence interval
 
@@ -134,7 +136,7 @@ sleep_stats |>
   b) "Students May Not Be Getting Enough Sleep, Survey Suggests"
   c) "Survey: Students Getting Recommended Amount of Sleep"
 
-ANSWER HERE
+Out of these three headlines, C is justified. The first headline is not totally accurate because our lower ci is lower than 8, so it's misleading. The second headline is incorrect because we found that students are meeting CDC reccommendations. The third headline is right because both the lower and upper ci predicts that students surveyed are getting an adequate amount of sleep every night based on CDC guidelines. 
 
 ### Task 7: What about a bigger sample?
 
