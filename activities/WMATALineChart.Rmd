@@ -58,4 +58,4 @@ weekly_wmata |>
 
 **Answer this question:** Describe the trend you see. Is ridership going up, down, or staying flat? What are the big dips, and what might explain them? What would you want to know before writing a story about Metro weekly ridership trends?
 
-ANSWER HERE
+The ridership on Metro fluctuates too much to indicate that it's heading any direction in particular, but the most recent line seems to indicate ridership going back down a bit from its last spike. The downward spikes look pretty seasonal, and that the beginning of each year and the winter months drive ridership down dramatically. This is likely because fewer people are commuting into work each day because of holiday time off. I would want to know if Metro ridership spikes during certain times of day, like beginning and end of workday, weekend evenings with people going out and if people use Metro less during the day on weekends. 
