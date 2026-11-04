@@ -93,10 +93,13 @@ ggplot(nonvoters_data, aes(x = weight)) +
 **Questions:**
 
 1. What is the range of weights in this dataset?
+The range is between 0.5 to 2.5 on this dataset. 
 
 2. What does it mean when a respondent has a weight of 0.23? What about 3.04?
+These weights mean that a respondent with a weight of 3.04 has more value and meaning in the end result than a respondent with 0.23. The response that is weighed lower is a subset that would be accurately represented and therefore has less need for a heavier weight in the survey. 
 
 3. Why might some respondents be weighted more heavily than others?
+This could be because some respondents are harder to get responses from or their responses hold more meaning and value to the question trying to be answered. In particular, we would need more weight in a survey with people who rarely/never vote since they are less likely to respond to a poll and less likely to submit a vote in elections.  
 
 # Exercise 1: Voter Categories and Weighting
 
@@ -232,7 +235,10 @@ kable(comparison, digits = 1, caption = "Difference Between Weighted and Unweigh
 **Answer These Questions:**
 
 1. Which voter category shows the biggest difference between weighted and unweighted results?
+The category with the biggest difference between weighted and unweighted responses is the rarely/never voter category.
 
 2. How might these differences affect reporting on likely voter turnout?
+These differences would affect how we report on voter turnout by overrepresenting the rarely/never voter group. We would then have to figure out how to interpret and report in a way that is not misleading based on the polling data. 
 
 3. Why do you think these differences exist? What does this tell us about who might be over or under-represented in the sample?
+These differences exist to try and make it more fair and make polls more accurately represent groups that are typically underrepresented. We would use this in this example because people who rarely/never vote are harder to get responses from. This tells us that never/rarely voters need more intervention and weighting in their responses to get a more accurate dataset. 
