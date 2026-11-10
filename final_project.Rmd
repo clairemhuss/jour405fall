@@ -1,0 +1,33 @@
+---
+title: "final-project"
+output: html_document
+author: "Claire Huss"
+date: "2026-11-10"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(readxl)
+```
+Here are the different datasets for 2025. I have downloaded the zip files for every year from 2020 to 2025, but I wasn't sure exactly how to feed it all in/what we should and shouldn't be including. There's a lot of information to clean through here, and I think that doing a five year look into the numbers could be interesting, but there must be a better/more efficient way to comb through it all. Also, converting all of these from xls files to csv was a pain, but another thing I'm sure there is an easier way to do. Open to suggestions! 
+
+```{r}
+noncampusarrest_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/noncampusarrest222324.csv")
+noncampusdiscipline_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/noncampusdiscipline222324.csv")
+oncampusarrest25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/oncampusarrest222324.csv")
+oncampusdiscipline25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/oncampusdiscipline222324.csv")
+reportedarrest25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/reportedarrest222324.csv")
+reportedcrime25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/reportedcrime222324.csv")
+reporteddiscipline25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/reporteddiscipline222324.csv")
+```
+```{r}
+bigten <- c('University of Maryland-College Park', 'Pennsylvania State University-Main Campus', 'University of Michigan-Ann Arbor', 'University of Illinois Urbana-Champaign', 'Indiana University-Bloomington', 'University of Iowa', 'University of Minnesota-Twin Cities', 'University of Nebraska-Lincoln', 'University of California-Los Angeles', 'University of Southern California', 'University of Washington-Seattle Campus', 'University of Wisconsin-Madison', 'Michigan State University', 'Northwestern University', 'Ohio State University-Main Campus', 'Purdue University-Main Campus', 'Rutgers University-New Brunswick')
+
+```
+
+From here, it would be helpful to me to get more guidance on using the last line of code you recommended on my weekly questions. Also, if there is a way to synthesize any of these datasets, that would also be very helpful. Thanks!
+
