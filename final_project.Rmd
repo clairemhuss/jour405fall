@@ -5,24 +5,23 @@ author: "Claire Huss"
 date: "2026-11-10"
 ---
 
+For this assignment, I think I should be using hypothesis testing and a p-value to determine if my central thesis holds up. I think there is a large enough sample size for a p test to be applicable. Additionally, I think that this test would strengthen my point by allowing me to reject a hypothesis. 
+
+I'm wondering if there's also a way to test for the correlation between schools with a heavy Greek life presence and crimes related to drinking. I think that data could be really compelling and would be worth running a test on as well. 
+
+These are the main tests that I think would apply for my data, but I'm not sure if I'm missing anything. I feel like these relate the most to my central hypothesis, but I'm curious to see if we try any other testing methods in the next few weeks that could also be useful. 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
 library(tidyverse)
-library(readxl)
 ```
 Here are the different datasets for 2025. I have downloaded the zip files for every year from 2020 to 2025, but I wasn't sure exactly how to feed it all in/what we should and shouldn't be including. There's a lot of information to clean through here, and I think that doing a five year look into the numbers could be interesting, but there must be a better/more efficient way to comb through it all. Also, converting all of these from xls files to csv was a pain, but another thing I'm sure there is an easier way to do. Open to suggestions! 
 
 ```{r}
-noncampusarrest_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/noncampusarrest222324.csv")
-noncampusdiscipline_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/noncampusdiscipline222324.csv")
-oncampusarrest25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/oncampusarrest222324.csv")
-oncampusdiscipline25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/oncampusdiscipline222324.csv")
-reportedarrest25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/reportedarrest222324.csv")
-reportedcrime25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/reportedcrime222324.csv")
-reporteddiscipline25_data <- read_csv("/Users/clairehuss/documents/GitHub/jour405fall/project/reporteddiscipline222324.csv")
+noncampusarrest_data <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/oncampus_crime_campus_year.csv")
 ```
 ```{r}
 bigten <- c('University of Maryland-College Park', 'Pennsylvania State University-Main Campus', 'University of Michigan-Ann Arbor', 'University of Illinois Urbana-Champaign', 'Indiana University-Bloomington', 'University of Iowa', 'University of Minnesota-Twin Cities', 'University of Nebraska-Lincoln', 'University of California-Los Angeles', 'University of Southern California', 'University of Washington-Seattle Campus', 'University of Wisconsin-Madison', 'Michigan State University', 'Northwestern University', 'Ohio State University-Main Campus', 'Purdue University-Main Campus', 'Rutgers University-New Brunswick')
