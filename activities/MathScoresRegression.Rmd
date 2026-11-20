@@ -32,7 +32,7 @@ schools |> arrange(`FARMS Pct`) |> head(10)
 
 Look at the distribution of FARMS percentages. Do any values look unusual or suspicious? What might it mean if a school has a FARMS percentage of exactly 100? Write two or three sentences describing what you see and whether anything concerns you.
 
-ANSWER HERE
+It's interesting to me that the percentage of students eligible for FARMS are either 100% exactly or barely more than half. If a school has a percentage of exactly 100% of students on FARMS, it means that every single student at that school is eligible for a reduced-price lunch program. I think this is interesting because this dataset doesn't include how many of those students are actually using the FARMS program. Yes, they're eligible, but it seems very unlikely that every single student is on a FARMS program. 
 
 
 ### Task 2: Create a Scatterplot and Describe the Results
@@ -50,7 +50,7 @@ schools |>
 
 Describe what you see. Is there a clear trend? Does the regression line look like it represents the data well, or does it seem to be pulled in an odd direction? Connect what you observed in Task 1 to what you see here.
 
-ANSWER HERE
+Based on the scatterplot, it doesn't look like there is a clear trend or correlation between FARMS percentage and math expectations. This regression line also doesn't seem to fit the data very well because it's all spread out so much. Additionally, there are a few points at the 100% mark and not many between there and 50%. I think that this is strange and connects to my first answer where it seems odd that it's either every student eligible or just more than half. 
 
 
 ### Task 3: Run the Regression Model
@@ -68,7 +68,7 @@ The **p-value** tells you whether the relationship is statistically significant.
 
 Report all three values and describe what they tell you. Does this model support the school board member's claim? Is this even a model worth using?
 
-ANSWER HERE
+The p-value here is 0.12, which is larger than the 0.05 and therefore tells us that this relationship is not statistically significant. An r-squared value of 2.5% only accounts for that amount in the math score, so there is a small correlation but not enough for it to be attributed to a large part of the argument. Additionally, the coefficient is positive, but that doesn't necessarily mean that it's significant in this instance. This model is not worth using. 
 
 
 ### Task 4: What's Driving the Problem? Filter and Rerun.
@@ -98,7 +98,7 @@ cat("  Adjusted R-squared:", summary(model_filtered)$adj.r.squared, "\n")
 
 How did removing those schools change the model? Did the coefficient change direction? Did the p-value or R-squared improve meaningfully? What does this tell you about the influence of suspicious data values on a regression model?
 
-ANSWER HERE
+Removing the schools made the model slightly more reliable, but still not very strong. The coefficient got slightly stronger, and the lower p-value makes the value statistically significant. This tells us that suspicious data in a regression model can make an impact on and influence datasets and that we need to be interrogating suspicious figures. 
 
 
 ### Task 5: Even the Better Model Has Problems
@@ -132,8 +132,7 @@ head(schools_filtered |> select(1, `FARMS Pct`, `% Met or Exceeded Math Expectat
 
 What are the largest residuals? Given the model's weak R-squared, how much confidence would you have in labeling these schools as over- or under-performers? Why?
 
-ANSWER HERE
-
+The largest residuals are -37.66 and -32.53 from Gulph Elementary School and Hereford Elementary School. Because of the weak r-squared, I would not have much confidence labeling either of these schools as definitive underperformers since there's not strong evidence for correlation between the predicted and the actual figures. 
 
 ### Task 6: Write the Story Pitch
 
@@ -141,4 +140,4 @@ You've now run two models, examined the data quality and seen that even a cleane
 
 Write a short story pitch (3-5 sentences) that addresses the following: Does the data support or contradict the claim? What data quality issues did you find? What would you need - different data, a different model, additional reporting - before you could responsibly publish a story about this claim? Who would you call first?
 
-ANSWER HERE
+I want to write a story arguing that this data contradicts the school board's claim. We would need to prove that something for sure was wrong in the data and that it's impossible that 100% of the students at these schools would receive FARMS benefits. I think that from there, we could use this modified dataset to correct what was incorrect about both the original statement, and show how even when the data is changed to be more accurate, the statement from the school board still isn't really that true. 
